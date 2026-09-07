@@ -4,9 +4,10 @@
     <div class="card-body">
         <div class="flex items-start justify-between gap-4">
             <div>
-
-                {{ $task->title }}
-        
+                <a href="/tasks/{{ $task->id }}"
+                class="text-lg font-semibold hover:text-primary">
+                    {{ $task->title }}
+                </a>
                 <p class="text-sm opacity-70">
                     finished {{ $task->updated_at->diffForHumans() }}
                 </p>

@@ -12,4 +12,10 @@ class TaskController extends Controller
         $tasks = Task::where('done', true)->latest()->paginate(10);
         return view('tasks.index', ['tasks' => $tasks]); //pfadstrukturen mit . nicht mit /
     }
+
+    public function show(Task $task)
+    {
+        //
+        return view('tasks.show', compact('task'));  //return view('tasks.show', ['task' => $task]); 
+    }
 }
