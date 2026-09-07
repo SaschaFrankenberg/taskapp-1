@@ -25,12 +25,15 @@ class DatabaseSeeder extends Seeder
 
         $tasks = [
             ['title' => 'IT Basics', 'description' => 'Grundlegende Programmierung', 'done' => true],
-            ['title' => 'Laravel Basics', 'description' => 'Routing und Controller in Laravel', 'done' => true],
+            ['title' => 'Laravel Basics', 'description' => 'Routing and Controller in Laravel', 'done' => true],
             ['title' => 'Zugriffe in Laravel', 'description' => 'Authorisierung und Gruppierung in Laravel', 'done' => false],
+            ['title' => 'Laravel Eloquent ORM', 'description' => 'Datenbank-Modelle, Migrationen und Beziehungen', 'done' => true],
+            ['title' => 'REST APIs mit Laravel', 'description' => 'Erstellen von API-Endpunkten und JSON-Validierung', 'done' => true],
+            ['title' => 'Testing in Laravel', 'description' => 'Schreiben von Unit- und Feature-Tests mit Pest oder PHPUnit', 'done' => true],
         ];
 
-        foreach($tasks as $task)
-            Task::create($task);
 
+        foreach ($tasks as $task)
+            Task::create($task);
     }
 }

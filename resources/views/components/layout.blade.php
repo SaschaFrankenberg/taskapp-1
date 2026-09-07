@@ -13,6 +13,5 @@
     <main class="mx-auto max-w-5xl px-4 py-8">
         {{ $slot }}
     </main>
-
 </body>
 </html>
