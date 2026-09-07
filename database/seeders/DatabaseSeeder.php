@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,9 +18,19 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+        $tasks = [
+            ['title' => 'IT Basics', 'description' => 'Grundlegende Programmierung', 'done' => true],
+            ['title' => 'Laravel Basics', 'description' => 'Routing und Controller in Laravel', 'done' => true],
+            ['title' => 'Zugriffe in Laravel', 'description' => 'Authorisierung und Gruppierung in Laravel', 'done' => false],
+        ];
+
+        foreach($tasks as $task)
+            Task::create($task);
+
     }
 }
