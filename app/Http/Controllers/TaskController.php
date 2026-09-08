@@ -9,7 +9,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::where('done', true)->latest()->paginate(10);
+        $tasks = Task::where('done', true)->latest()->paginate(3);
         return view('tasks.index', compact('tasks')); //pfadstrukturen mit . nicht mit /
     }
 
